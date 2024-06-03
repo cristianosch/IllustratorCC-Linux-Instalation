@@ -2,31 +2,32 @@
 
 # Como instalar Adobe Illustrator no Linux Ubuntu
 
-Instalar o Wine e Dependencias 
+- Instalar o Wine e Dependencias 
 
 **1. Adicionar o Repositório do Wine:**
 
-sudo dpkg --add-architecture i386
-sudo mkdir -pm755 /etc/apt/keyrings
-wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo tee /etc/apt/keyrings/winehq-archive.key
-sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$(lsb_release -cs)/winehq-$(lsb_release -cs).sources
+<p>sudo dpkg --add-architecture i386</p>
+<p>sudo mkdir -pm755 /etc/apt/keyrings</p>
+<p>wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo tee /etc/apt/keyrings/winehq-archive.key</p>
+<p>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$(lsb_release -cs)/winehq-$(lsb_release -cs).sources</p>
 
 
 **2. Instalar Wine:**
 
-sudo apt update
-sudo apt install --install-recommends winehq-stable
+<p>sudo apt update</p>
+<p>sudo apt install --install-recommends winehq-stable</p>
 
 
 **3. Instalar Winetricks (Ferramenta para Instalar Componentes Adicionais):**
 
-sudo apt install winetricks
+<p>sudo apt install winetricks</p>
 
 
 # Passo 2: Configurar o Wine
 
 **1. Configurar o Wine:**
-Execute o comando winecfg para abrir a configuração do Wine e faça o seguinte:
+
+<p>Execute o comando winecfg para abrir a configuração do Wine e faça o seguinte:</p>
 
     Na aba Applications, defina a versão do Windows para Windows 10.
     Na aba Libraries, adicione as seguintes bibliotecas e defina-as como native, builtin:
@@ -43,17 +44,17 @@ Execute o comando winecfg para abrir a configuração do Wine e faça o seguinte
         
 **2. Instalar Componentes Adicionais com o Winetricks:**
 
-Execute os seguintes comandos para instalar componentes adicionais:
+<p>Execute os seguintes comandos para instalar componentes adicionais:</p>
 
-winetricks gdiplus
-winetricks msxml6
-winetricks vcrun2010
-winetricks atmlib
-winetricks msvcr100
-winetricks msvcr120
+<p>winetricks gdiplus</p>
+<p>winetricks msxml6</p>
+<p>winetricks vcrun2010</p>
+<p>winetricks atmlib</p>
+<p>winetricks msvcr100</p>
+<p>winetricks msvcr120</p>
 
 
-**4. Instalar o Illustrator
+**3. Instalar o Illustrator**
 
 git clone https://github.com/Gictorbit/illustratorCClinux.git
 
