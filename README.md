@@ -6,21 +6,21 @@
 
 **1. Adicionar o Repositório do Wine:**
 
-    <p>sudo dpkg --add-architecture i386</p>
-    <p>sudo mkdir -pm755 /etc/apt/keyrings</p>
-    <p>wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo tee /etc/apt/keyrings/winehq-archive.key</p>
-    <p>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$(lsb_release -cs)/winehq-$(lsb_release -cs).    sources</p>
+    sudo dpkg --add-architecture i386
+    sudo mkdir -pm755 /etc/apt/keyrings
+    wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo tee /etc/apt/keyrings/winehq-archive.key
+    sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$(lsb_release -cs)/winehq-$(lsb_release -cs).    sources
 
 
 **2. Instalar Wine:**
 
-    <p>sudo apt update</p>
-    <p>sudo apt install --install-recommends winehq-stable</p>
+    sudo apt update
+    sudo apt install --install-recommends winehq-stable
 
 
 **3. Instalar Winetricks (Ferramenta para Instalar Componentes Adicionais):**
 
-<p>sudo apt install winetricks</p>
+    sudo apt install winetricks
 
 
 # Passo 2: Configurar o Wine
@@ -46,12 +46,12 @@
 
 <p>Execute os seguintes comandos para instalar componentes adicionais:</p>
 
-    <p>winetricks gdiplus</p>
-    <p>winetricks msxml6</p>
-    <p>winetricks vcrun2010</p>
-    <p>winetricks atmlib</p>
-    <p>winetricks msvcr100</p>
-    <p>winetricks msvcr120</p>
+    winetricks gdiplus
+    winetricks msxml6
+    winetricks vcrun2010
+    winetricks atmlib
+    winetricks msvcr100
+    winetricks msvcr120
 
 
 **3. Instalar o Illustrator**
